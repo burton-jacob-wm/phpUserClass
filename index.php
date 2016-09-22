@@ -13,20 +13,29 @@
 </body>
 
 <?php
-class greet{
-    public $name;
+class People{
+    public $person1 = 'Jacob';
+    public $person2 = 'Gavin';
+    public $person3 = 'Jose';
+    public $person4 = 'Dave';
 
-    public function welcome(){
-        return "Welcome, " . $this->name;
-    }
+//    function iterateObject(){
+//        foreach($this as $key => $value){
+//            print "$key => $value \n";
+//        }
+//    }
 }
-$greeting = new greet();
-$greeting->name = 'Jacob';
-echo $greeting->welcome();
-echo '<br>';
 
+
+$people = new People;
+
+foreach($people as $key => $value){
+    print "$key => $value \n";
+}
+
+echo '<br>';
 //Creates New User Instance
-$user1 = new moderator('Jacob');
+$user1 = new moderator($people->person1);
 $user2 = new user('Gavin');
 $user3 = new user('Jose');
 $user4 = new user('Dave');
@@ -34,7 +43,7 @@ $user4 = new user('Dave');
 $user1descript = new moderatorDescription;
 
 //Sets User Instance Variables
-$user1->setInfo('Jacob','01','0001');
+$user1->setInfo($person1,'01','0001');
 $user2->setInfo('Gavin','02','0002');
 $user3->setInfo('Jose','03','0003');
 $user4->setInfo('Brendan','04','0004');
