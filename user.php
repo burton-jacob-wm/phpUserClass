@@ -3,6 +3,7 @@ class user{
     public $name;
     protected $id;
     private $securityId;
+    private static $securityIdMin = 4;
 
     public function __construct($persons_name){
         $this->name = $persons_name;
