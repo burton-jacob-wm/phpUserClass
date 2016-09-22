@@ -31,9 +31,9 @@ $people = new People;
 
 foreach($people as $key => $value){
     print "$key => $value \n";
+    echo '<br>';
 }
 
-echo '<br>';
 //Creates New User Instance
 $user1 = new moderator($people->person1);
 $user2 = new user('Gavin');
